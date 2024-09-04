@@ -1,5 +1,4 @@
 ## Chart Report
-## Chart Report
 
 The user connects to the database through the user interface and then selects either a function or a view object. The x and y columns to be plotted in the chart are chosen. Finally, the chart type is selected.
 This project uses PostgreSQL and is set up with Adminer via Docker on a local environment
