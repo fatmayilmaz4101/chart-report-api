@@ -19,9 +19,8 @@ namespace chart_report_api.Controllers
                 using (var connection = new NpgsqlConnection(connectionString))
                 {
                     await connection.OpenAsync();
-                    // Bağlantı başarılı olduysa diğer işlemlere geç
                     if (connectionString is not null)
-                        return Ok(connectionString); // Başarılı bir sonuç döner
+                        return Ok(connectionString);
                     else
                         return BadRequest("Failed to connect to the database");
                 }

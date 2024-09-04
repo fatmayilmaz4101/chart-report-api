@@ -1,8 +1,5 @@
-using chart_report_api.BusinessLogic.Entity;
 var builder = WebApplication.CreateBuilder(args);
-// Add services to the container.
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -10,25 +7,20 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("default_cors", policy =>
     {
-        policy.WithOrigins("http://localhost:3000") // Belirli bir origin ekleyin
+        policy.WithOrigins("http://localhost:3000")
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
 });
-builder.Services.AddScoped<ConnectionStringEntity>();
-
-
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseHttpsRedirection();
-app.UseCors("default_cors"); // CORS middleware'i burada kullanılmalı
+app.UseCors("default_cors");
 
 
 app.UseAuthorization();

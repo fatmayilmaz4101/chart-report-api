@@ -1,12 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 
 namespace chart_report_api.BusinessLogic.Entity
 {
-
     public class XColumn
     {
         [JsonIgnore]
@@ -25,7 +20,6 @@ namespace chart_report_api.BusinessLogic.Entity
     {
         public List<YColumn> Column { get; set; }
     }
-
     public class ViewXAndYColumnsInfo
     {
         public XColumn XColumn { get; set; }

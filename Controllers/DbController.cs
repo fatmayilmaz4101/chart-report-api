@@ -1,12 +1,7 @@
 using chart_report_api.BusinessLogic.Entity;
 using chart_report_api.Helper;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
 using Npgsql;
-public class FunctionInfo
-{
-    public string FunctionName { get; set; }
-}
 
 namespace chart_report_api.Controllers
 {
@@ -98,13 +93,6 @@ namespace chart_report_api.Controllers
                                     yCol2.Values.Add(reader[yCol2.NameAlias].ToString());
                                 });
                             });
-
-                            // var row = new Dictionary<string, object>();
-                            // foreach (var column in columns)
-                            // {
-                            //     row[column] = reader[column];
-                            // }
-                            // data.Add(row);
                         }
                     }
                 }
