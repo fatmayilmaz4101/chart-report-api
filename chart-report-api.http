@@ -1,0 +1,6 @@
+@chart_report_api_HostAddress = http://localhost:5143
+
+GET {{chart_report_api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
